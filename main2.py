@@ -4,6 +4,7 @@ from bokeh.io import output_file, output_notebook
 from bokeh.models import ColumnDataSource
 from bokeh.models import HoverTool
 from bokeh.models.widgets import Tabs, Panel
+from bokeh.io import curdoc
 
 # Membaca dataset dari Covid_19.csv
 df = pd.read_csv('Covid_19.csv', parse_dates=['Date'])
@@ -210,7 +211,8 @@ tabs = Tabs(tabs=[
                   New_Cases, New_Deaths, Total_Active_Cases
                 ])
 
-show(tabs)
+curdoc().add_root(tabs)
+curdoc().title = "Statistik Covid"
 
 # jadi kita tuh punya 2 fitur interaktif 
 # yang pertama yaitu 3 panel untuk memilih parameter yang ingin dibuka (New Cases, New Deaths, Total Active Cases)
