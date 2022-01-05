@@ -23,14 +23,6 @@ source_jabar = ColumnDataSource(data=jabar)
 source_jatim = ColumnDataSource(data=jatim)
 source_jateng = ColumnDataSource(data=jateng)
 
-source_jabar1 = ColumnDataSource(data=jabar)
-source_jatim1 = ColumnDataSource(data=jatim)
-source_jateng1 = ColumnDataSource(data=jateng)
-
-source_jabar2 = ColumnDataSource(data=jabar)
-source_jatim2 = ColumnDataSource(data=jatim)
-source_jateng2 = ColumnDataSource(data=jateng)
-
 # Membuat Figure untuk menampilkan New Cases
 # ini untuk buat figure nya alias buat gambarnya atau visualisasinya
 fig1 = figure(
@@ -47,7 +39,7 @@ fig1 = figure(
 a = fig1.line(
     x='Date',
     y='New Cases',
-    source=source_jabar2,
+    source=source_jabar,
     color='blue',
     legend_label='Jawa Barat'
 )
@@ -56,7 +48,7 @@ a = fig1.line(
 b = fig1.line(
     x='Date',
     y='New Cases',
-    source=source_jatim2,
+    source=source_jatim,
     color='red',
     legend_label='Jawa Timur'
 )
@@ -65,7 +57,7 @@ b = fig1.line(
 c = fig1.line(
     x='Date',
     y='New Cases',
-    source=source_jateng2,
+    source=source_jateng,
     color='yellow',
     legend_label='Jawa Tengah'
 )
@@ -101,7 +93,7 @@ fig2 = figure(
 a = fig2.line(
     x='Date',
     y='New Deaths',
-    source=source_jabar2,
+    source=source_jabar,
     color='blue',
     legend_label='Jawa Barat'
 )
@@ -110,7 +102,7 @@ a = fig2.line(
 b = fig2.line(
     x='Date',
     y='New Deaths',
-    source=source_jatim2,
+    source=source_jatim,
     color='red',
     legend_label='Jawa Timur'
 )
@@ -119,7 +111,7 @@ b = fig2.line(
 c = fig2.line(
     x='Date',
     y='New Deaths',
-    source=source_jateng2,
+    source=source_jateng,
     color='yellow',
     legend_label='Jawa Tengah'
 )
@@ -152,7 +144,7 @@ fig3 = figure(
 a = fig3.line(
     x='Date',
     y='Total Active Cases',
-    source=source_jabar2,
+    source=source_jabar,
     color='blue',
     legend_label='Jawa Barat'
 )
@@ -161,7 +153,7 @@ a = fig3.line(
 b = fig3.line(
     x='Date',
     y='Total Active Cases',
-    source=source_jatim2,
+    source=source_jatim,
     color='red',
     legend_label='Jawa Timur'
 )
@@ -170,7 +162,7 @@ b = fig3.line(
 c = fig3.line(
     x='Date',
     y='Total Active Cases',
-    source=source_jateng2,
+    source=source_jateng,
     color='yellow',
     legend_label='Jawa Tengah'
 )
