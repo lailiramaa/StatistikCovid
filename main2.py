@@ -4,7 +4,6 @@ from bokeh.io import output_file, output_notebook
 from bokeh.models import ColumnDataSource
 from bokeh.models import HoverTool
 from bokeh.models.widgets import Tabs, Panel
-from mpi4py import MPI
 
 # Membaca dataset dari Covid_19.csv
 df = pd.read_csv('Covid_19.csv', parse_dates=['Date'])
