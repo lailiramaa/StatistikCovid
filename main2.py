@@ -217,16 +217,3 @@ show(tabs)
 # jadi kita tuh punya 2 fitur interaktif 
 # yang pertama yaitu 3 panel untuk memilih parameter yang ingin dibuka (New Cases, New Deaths, Total Active Cases)
 # yang kedua yaitu user dapat menyembunyikan data untuk indeks tertentu dengan mengklik legend index 
-def index(request):
-    r = requests.get('http://httpbin.org/status/418')
-    print(r.text)
-    times = int(os.environ.get('TIMES',3))
-    return HttpResponse('Hello! ' * times)
-def db(request):
-
-    greeting = Greeting()
-    greeting.save()
-
-    greetings = Greeting.objects.all()
-
-    return render(request, 'db.html', {'greetings': greetings})
