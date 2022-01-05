@@ -1,1 +1,1 @@
-web: gunicorn main2:app --log.file -
+web: bokeh serve --port=$PORT --allow-websocket-origin=statistik-covid-di-jawa.herokuapp.com --address=0.0.0.0 --use-xheaders main2.py
